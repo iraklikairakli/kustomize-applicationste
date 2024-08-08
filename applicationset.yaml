@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: 'https://github.com/iraklikairakli/kustomize-applicationste.git'
         targetRevision: HEAD
-        path: 'overlays/{{cluster}}'
+        path: 'overlays/dev'
       destination:
         server: '{{url}}'
         namespace: default
