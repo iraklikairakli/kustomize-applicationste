@@ -2,13 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: my-applicationset
+  namespace: argocd
 spec:
   generators:
   - list:
       elements:
-      - cluster: in-cluster
-        url: https://kubernetes.default.svc
       - cluster: local
+        url: https://kubernetes.default.svc
+      - cluster: devops
         url: https://10.0.10.12:6443
   template:
     metadata:
